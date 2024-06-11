@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('studentCourseCode');
             $table->string('studentFaculty');
             $table->integer('status');
+            $table->timestamps();
             // Foreign key constraint
             $table->foreign('studentId')->references('id')->on('users')->onDelete('cascade');
         });
